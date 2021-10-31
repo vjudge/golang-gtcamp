@@ -15,7 +15,7 @@ type User struct {
 }
 
 func InitClient() (db *sql.DB, err error)  {
-	db, err = sql.Open("mysql", "rw_test:Txy_test168@tcp(rm-j6crf85vc749b3v6v4o.mysql.rds.aliyuncs.com:3306)/testgo?charset=utf8")
+	db, err = sql.Open("mysql", "rw_test:Txy_test168@tcp(127.0.0.1:3306)/testgo?charset=utf8")
 	if err != nil {
 		err = errors.Wrap(err, "sql connect is fail")
 		return
